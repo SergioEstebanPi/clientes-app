@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DirectivaComponent implements OnInit {
 
+  listacursos:string[] = [
+    'TypeScript',
+    'JavaScri pt',
+    'PHP',
+    'C#'
+  ];
+  habilitar:boolean = true;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  setHabilitar(): void{
+    this.habilitar = !this.habilitar;
   }
 
 }
