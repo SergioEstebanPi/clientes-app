@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Cliente } from './cliente';
+import { CLIENTES } from './clientes.json';
 
 @Component({
   selector: 'app-clientes',
@@ -9,33 +10,12 @@ import { Cliente } from './cliente';
 })
 export class ClientesComponent implements OnInit {
 
-  clientes:Cliente[] = [
-    {
-      id: 1,
-      nombre: "Sergio",
-      apellido: "Piña",
-      email: "cliente@hotmail.com",
-      createAt: "2018-11-24"
-    },
-    {
-      id: 2,
-      nombre: "Sergio",
-      apellido: "Piña",
-      email: "cliente@hotmail.com",
-      createAt: "2018-11-24"
-    },
-    {
-      id: 3,
-      nombre: "Sergio",
-      apellido: "Piña",
-      email: "cliente@hotmail.com",
-      createAt: "2018-11-24"
-    }
-  ];
+  clientes:Cliente[];
 
   constructor() { }
 
   ngOnInit() {
+    this.clientes = CLIENTES;
   }
 
 }
