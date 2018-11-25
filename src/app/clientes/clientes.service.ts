@@ -4,7 +4,7 @@ import { Cliente } from './cliente';
 import { CLIENTES } from './clientes.json';
 
 import { Observable } from 'rxjs';
-import { asapScheduler, pipe, of, from, interval, merge, fromEvent } from 'rxjs';
+import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
