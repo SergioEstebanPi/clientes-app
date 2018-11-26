@@ -16,7 +16,7 @@ export class FormComponent implements OnInit {
   ngOnInit() {
   }
 
-  create(){
+  public create(){
     console.log("Clicked");
     console.log(this.cliente);
   }
