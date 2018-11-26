@@ -34,7 +34,7 @@ export class FormComponent implements OnInit {
     );
   }
 
-  public create():void{
+  create():void{
     console.log("Clicked");
     console.log(this.cliente);
     this.clientesService.create(this.cliente)
@@ -46,6 +46,17 @@ export class FormComponent implements OnInit {
         this.router.navigate(["/clientes"]);
       })
     ;
+  }
+
+  update():void{
+    this.clientesService.update(this.cliente)
+    .subscribe(
+      respuesta => {
+        swal('Cliente actualizado'),
+        `Cliente ${this.cliente.nombre} actualizado con exito`,
+        'success'
+      }
+    );
   }
 
 }
